@@ -71,7 +71,7 @@ Config the settings in ```settings.py```
 
 Parse from files and launch into database: ```python fangzi.py -p -l```
 
-![img](https://github.com/Lwxiang/fangzi/raw/master/examples/images/parse_launch.jpg)
+![img](https://github.com/Lwxiang/fangzi/raw/master/examples/images/parse_and_launch.jpg)
 
 Show the functions' status in database: ```python fangzi.py -s```
 
