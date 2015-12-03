@@ -4,7 +4,7 @@ import hashlib
 @IMPORT_END@
 @STATIC_BEGIN@
 str_tail = 'FangZi'
-hash_key = 'Are you OK'
+hash_key = 'Are you OK'  # Of Course U R
 @STATIC_END@
 @FUNC_BEGIN@
 @FUNC_HEAD_BEGIN@
