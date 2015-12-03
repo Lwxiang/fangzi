@@ -82,3 +82,8 @@ Wake up the functions by Flag/Group/Name: ```python fangzi.py --wake --flag CODE
 ![img](https://github.com/Lwxiang/fangzi/raw/master/examples/images/wake.jpg)
 
 ![img](https://github.com/Lwxiang/fangzi/raw/master/examples/images/close.jpg)
+
+### More
+A full example is provided in ```example/```
+
+Hope you come to discuss about the solution and any criticism or suggestion is welcome:)
