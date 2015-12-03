@@ -71,14 +71,14 @@ Config the settings in ```settings.py```
 
 Parse from files and launch into database: ```python fangzi.py -p -l```
 
-![img](http://i12.tietuku.com/c078f2d8a00cc34a.png)
+![img](https://github.com/Lwxiang/fangzi/raw/master/examples/images/parse_launch.jpg)
 
 Show the functions' status in database: ```python fangzi.py -s```
 
-![img](http://i12.tietuku.com/fd810398c64c7f3d.png)
+![img](https://github.com/Lwxiang/fangzi/raw/master/examples/images/status.jpg)
 
 Wake up the functions by Flag/Group/Name: ```python fangzi.py --wake --flag CODE```
 
-![img](http://i5.tietuku.com/553c78e927eb934b.png)
+![img](https://github.com/Lwxiang/fangzi/raw/master/examples/images/wake.jpg)
 
-![img](http://i5.tietuku.com/f0c137e993a34b21.png)
+![img](https://github.com/Lwxiang/fangzi/raw/master/examples/images/close.jpg)
