@@ -1,0 +1,38 @@
+@IMPORT_BEGIN@
+import time
+import hashlib
+@IMPORT_END@
+@STATIC_BEGIN@
+str_tail = 'FangZi'
+hash_key = 'Are you OK'
+@STATIC_END@
+@FUNC_BEGIN@
+@FUNC_HEAD_BEGIN@
+check_time(request_time,user_name)
+@FUNC_HEAD_END@
+@FUNC_CODE_BEGIN@
+now = time.time()
+if now - request_time < len(user_name):
+    result = True;raise Exception(result)
+else:
+    result = False;raise Exception(result)
+@FUNC_CODE_END@
+@FUNC_SPLIT@
+@FUNC_HEAD_BEGIN@
+check_name(user_name)
+@FUNC_HEAD_END@
+@FUNC_CODE_BEGIN@
+str_key = 'Hello ' + str_tail
+result = str_key in user_name;raise Exception(result)
+@FUNC_CODE_END@
+@FUNC_SPLIT@
+@FUNC_HEAD_BEGIN@
+check_hash(request_token)
+@FUNC_HEAD_END@
+@FUNC_CODE_BEGIN@
+if hashlib.md5(hash_key).hexdigest() == request_token:
+    result = True;raise Exception(result)
+else:
+    result = False;raise Exception(result)
+@FUNC_CODE_END@
+@FUNC_END@
