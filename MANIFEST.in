@@ -1,0 +1,4 @@
+include requirement.txt
+include README.md
+include LICENSE
+include fangzi/parse_temp

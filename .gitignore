@@ -1,3 +1,4 @@
 .idea
 *.pyc
 examples/*.pyc
+fangzi.egg-info
