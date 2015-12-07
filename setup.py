@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # !/usr/bin/env python
 
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
     name='fangzi',
@@ -14,8 +14,8 @@ setup(
     author='lwxiang',
     author_email='lwxiang1994@gmail.com',
 
-    packages=find_packages(),
+    packages=['fangzi'],
     include_package_data=True,
     platforms='any',
-    install_requires=map(lambda x: x.replace('==', '>='), open("requirement.txt").readlines()),
+    install_requires=map(lambda x: x.replace('==', '>='), open("requirements.txt").readlines()),
 )
