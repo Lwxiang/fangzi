@@ -1,4 +1,9 @@
 .idea
 *.pyc
 examples/*.pyc
-fangzi.egg-info
+
+*.swp
+
+*.egg*
+dist
+build

@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
+# !/usr/bin/env python
 
 from setuptools import setup, find_packages
 
 setup(
     name='fangzi',
     version='0.1.0',
-    keywords=u'fangzi',
-    description=u'Python-Dynamic-FunctionCheck-Tools',
+    keywords='fangzi',
+    description='Python-Dynamic-FunctionCheck-Tools',
     long_description=open("README.md").read(),
     license='MIT License',
 
