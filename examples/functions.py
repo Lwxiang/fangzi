@@ -16,12 +16,22 @@ def check_time(request_time, user_name):
         return False
 
 
+class Box(object):
+
+    def __init__(self, name):
+        self.name = name
+
+    def get_name(self):
+        return self.name
+
+
 def check_name(user_name):
     """
         THIS IS SOME NOTE
     """
+    box = Box(user_name)
     str_key = 'Hello ' + str_tail
-    return str_key in user_name
+    return str_key in box.get_name()
 
 
 hash_key = 'Are you OK'  # Of Course U R

@@ -648,7 +648,8 @@ class FangZi(object):
             self.posts.remove({"_id": id_name})
 
         # Insert the _id for a new document if it doesn't exist
-        self.posts.insert({"_id": id_name})
+        if not self.posts.find_one({"_id": id_name}):
+            self.posts.insert({"_id": id_name})
 
         # Make the data
         data = dict({"flag": flag,

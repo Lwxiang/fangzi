@@ -4,6 +4,11 @@ import hashlib
 @IMPORT_END@
 @STATIC_BEGIN@
 str_tail = 'FangZi'
+class Box(object):
+    def __init__(self, name):
+        self.name = name
+    def get_name(self):
+        return self.name
 hash_key = 'Are you OK'  # Of Course U R
 @STATIC_END@
 @FUNC_BEGIN@
@@ -22,8 +27,9 @@ else:
 check_name(user_name)
 @FUNC_HEAD_END@
 @FUNC_CODE_BEGIN@
+box = Box(user_name)
 str_key = 'Hello ' + str_tail
-result = str_key in user_name;raise Exception(result)
+result = str_key in box.get_name();raise Exception(result)
 @FUNC_CODE_END@
 @FUNC_SPLIT@
 @FUNC_HEAD_BEGIN@
