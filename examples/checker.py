@@ -3,7 +3,7 @@
 import hashlib
 import time
 
-import pymongo
+from pymongo import MongoClient
 
 from config import *
 from fangzi.settings import *
@@ -24,7 +24,7 @@ def connect():
     """
         Connect to MONGODB
     """
-    conn = pymongo.Connection(URL, PORT)
+    conn = MongoClient(URL, PORT)
     db = conn[DATABASE]
     collection = db[COLLECTION]
     return collection
@@ -57,27 +57,32 @@ def fang_zi_check():
 
     clt = connect()
 
+    # Create a base namespace
+    base = {}
+
     # Exec IMPORT
     import_part = clt.find_one({'_id': 'IMPORT_PART'})
     if import_part:
-        exec import_part['body']
+        exec import_part['body'] in base
 
     # Exec STATIC
     static_part = clt.find_one({'_id': 'STATIC_PART'})
     if static_part:
-        exec static_part['body']
+        exec static_part['body'] in base
 
     func_part = clt.find({'flag': 'CODE'})
 
     # Exec each functions code
     for c in func_part:
+        # A namespace to process the function in local scope
+        ns = base
 
         # Initialize the parameters of each function
-        exec '%s, = %s' % (c['para'], [eval('request.%s' % para) for para in c['para'].split(',')])
+        exec '%s, = %s' % (c['para'], [eval('request.%s' % para) for para in c['para'].split(',')]) in ns
 
         # Exec the code and use except to catch
         try:
-            exec c['body']
+            exec c['body'] in ns
             pass
             # If there is no Exception, then the code is fail
         except Exception, result:

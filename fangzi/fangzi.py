@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import pymongo
+from pymongo import MongoClient
 import optparse
 from settings import *
 
@@ -104,7 +104,7 @@ class FangZi(object):
         """
 
         # Make a Connection to MONGODB, give self.posts the collection
-        conn = pymongo.Connection(url, port)
+        conn = MongoClient(url, port)
         db = conn[database]
         self.posts = db[collection]
 
