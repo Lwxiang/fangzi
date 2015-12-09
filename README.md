@@ -1,5 +1,22 @@
 # FangZi
 
+## Quickly Start
+Console
+
+```python setup.py install```
+
+Python Console
+```python
+import fangzi
+handler = fangzi.FangZi()
+```
+
+Or use it like a script
+
+```python setup.py --status```
+
+---
+
 ### What is FangZi
 ```FangZi``` is a simple tool for manage functions in ```MongoDB```.
 
