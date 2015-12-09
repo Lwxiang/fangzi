@@ -7,8 +7,8 @@ Console
 
 Python Console
 ```python
-import fangzi
-handler = fangzi.FangZi()
+from fangzi import FangZi
+handler = FangZi()
 ```
 
 Or use it like a script
