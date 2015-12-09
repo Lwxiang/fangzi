@@ -82,7 +82,8 @@ def fang_zi_check():
 
         # Exec the code and use except to catch
         try:
-            exec c['body'] in ns
+            bytecode = compile(c['body'], '<string>', 'exec')
+            exec bytecode in ns
             pass
             # If there is no Exception, then the code is fail
         except Exception, result:
