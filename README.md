@@ -17,10 +17,10 @@ Or use it like a script
 
 ---
 
-### What is FangZi
+## What is FangZi
 ```FangZi``` is a simple tool for manage functions in ```MongoDB```.
 
-### Dynamic Function Check
+## Dynamic Function Check
 
 Consider this case:
 ```python
@@ -52,7 +52,7 @@ If we want to manage the functions, all we need is to handle the content of ```f
 
 So that we get a dynamic-function-check solution.
 
-### How it works?
+## How it works?
 The point is that we store all of our check-functions into ```MongoDB```, each function take one Ducument.
 
 We don't need the functions' head and its return, we parse them and make it into the code we need.
@@ -79,7 +79,7 @@ This code can be execute by ```exec``` and the result will be catch by except.
 
 So we get a full solution for the dynamic-function-check.
 
-### Usage
+## Usage
 Install MongoDB: ```pip install -r requirement.txt```
 
 Make sure your local MongoDB server is running
@@ -100,17 +100,17 @@ Wake up the functions by Flag/Group/Name: ```python fangzi.py --wake --flag CODE
 
 ![img](https://github.com/Lwxiang/fangzi/raw/master/examples/images/close.jpg)
 
-### More
+## More
 A full example is provided in ```example/```
 
 Hope you come to discuss about the solution and any criticism or suggestion is welcome:)
 
 # 中文介绍
 
-### 什么是房子
+## 什么是房子
 房子(FangZi)是一个简单的脚本工具，确切的说是一个工具类，可以在你的代码中直接```import```嵌入使用。
 
-### 动态规则检查
+## 动态规则检查
 
 看看这个例子：
 ```python
@@ -144,7 +144,7 @@ if flag:
 
 当需要使用时，从数据库中取出来，使用```exec```执行其代码部分
 
-### 怎么做
+## 怎么做
 房子(FangZi)是用来把普通的包含函数的源文件转化并写入数据库中的工具，并且提供了管理的方法。
 
 我们使用```MongoDB```进行储存，一个函数(function)对应一个数据库中的文档(Document)
@@ -174,5 +174,5 @@ else:
 
 这样就获得了函数执行的结果。
 
-### 使用
+## 使用
 见上文 Usage
