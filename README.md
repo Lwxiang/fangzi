@@ -13,7 +13,7 @@ handler = FangZi()
 
 Or use it like a script
 
-```python setup.py --status```
+```python fangzi.py --status```
 
 ---
 
